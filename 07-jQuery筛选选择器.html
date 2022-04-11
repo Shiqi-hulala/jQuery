@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.staticfile.org/jquery/2.2.0/jquery.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>blackpink</li>
+        <li>blackpink</li>
+        <li>blackpink</li>
+        <li>blackpink</li>
+        <li>blackpink</li>
+        <li>blackpink</li>
+    </ul>
+    <ol>
+        <li>jennie</li>
+        <li>jennie</li>
+        <li>jennie</li>
+        <li>jennie</li>
+        <li>jennie</li>
+        <li>jennie</li>
+    </ol>
+</body>
+<script>
+    $(function () {
+        $('ul li:first').css('color', 'pink')
+        $('ul li:last').css('color', 'skyblue')
+        $('ul li:eq(2)').css('color', 'green')
+        $('ol li:odd').css('color', 'pink')
+        // $('ol li:even').css('color', 'pink')
+    })
+</script>
+
+</html>

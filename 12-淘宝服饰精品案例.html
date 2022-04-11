@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.staticfile.org/jquery/2.2.0/jquery.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    /* .wrapper {
+        display: flex;
+        width: 400px;
+        margin: 30px auto;
+    }
+
+    ul {
+        flex: 1;
+    }
+
+    ul li {
+        list-style: none;
+        border: 1px solid pink;
+    }
+
+    ul li a {
+        text-decoration: none;
+    } */
+
+
+    /* 
+    #content img {
+        background-size: cover;
+    } */
+</style>
+
+<body>
+    <!-- top栏切换 -->
+    <div class="wrapper">
+        <ul id="left">
+            <li><a href="#">jennie</a></li>
+            <li><a href="#">jennie</a></li>
+            <li><a href="#">lisa</a></li>
+            <li><a href="#">rose</a></li>
+            <li><a href="#">jisoo</a></li>
+            <li><a href="#">jisoo</a></li>
+        </ul>
+        <div id="content">
+            <div>
+                <a href="#">
+                    <img src="./img/jennie.jpg" width="300px" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./img/jennie1.jpg" width="300px" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./img/lisa.jpg" width="300px" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./img/rose.jpg" width="300px" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./img/Jisoo.jpg" width="300px" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./img/Jisoo1.jpg" width="300px" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            // 1. 鼠标经过 左侧 li
+            // $('#left li').mousemove(function () {
+            $('#left li').click(function () {
+                // 2.得到 li 的索引号
+                var index = $(this).index();
+                // console.log(index);
+                // 3.让右侧 相应索引号 的图片显示就可以了
+                // $('#content div').eq(index).show();
+                // 4.让其他图片隐藏
+                // $('#content div').eq(index).siblings().hide()
+
+                // 链式编程
+                $('#content div').eq(index).show().siblings().hide()
+            })
+        })
+    </script>
+</body>
+
+</html>

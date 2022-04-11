@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.staticfile.org/jquery/2.2.0/jquery.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div>惊喜不，意外不</div>
+    <div>惊喜不，意外不</div>
+    <div>惊喜不，意外不</div>
+    <div>惊喜不，意外不</div>
+    <ul>
+        <li>相同操作</li>
+        <li>相同操作</li>
+        <li>相同操作</li>
+    </ul>
+</body>
+<script>
+    // 1.获取四个div元素
+    console.log($('div'))
+    // 2.给四个div设置颜色
+
+    // for (var i = 0; i < 4; i++) {
+    //     $('div')[i].style.backgroundColor = 'pink'
+    // }
+    // $('div')[0].style.backgroundColor = 'pink'
+
+
+    // 隐式迭代  
+    // .ccs() 方法
+    $('div').css('background', 'pink')
+
+    // 隐式迭代  就是把匹配的所有元素内部进行遍历循环，给每一个元素添加css这个方法
+    $('ul li').css('color', 'red')
+</script>
+
+</html>

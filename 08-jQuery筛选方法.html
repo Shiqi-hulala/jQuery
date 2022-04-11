@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.staticfile.org/jquery/2.2.0/jquery.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="fa">
+        <div class="son"> er </div>
+    </div>
+    <div class="nav">
+        <p>ppppppp</p>
+        <div>
+            <p>--pp--</p>
+        </div>
+    </div>
+</body>
+<script>
+    // 注意一下都是方法 带括号
+    $(function () {
+        // 1.父
+        console.log($('.son').parent())
+
+        // 2. 子
+        // 亲儿子  children()  子代选择器
+        $('.nav').children('p').css('color', 'pink')
+        // 可以选择里面所有的孩子，包括儿子 孙子  find() 后代选择器
+        $('.nav').find('p').css('color', 'skyblue')
+        // 3.兄
+    })
+</script>
+
+</html>

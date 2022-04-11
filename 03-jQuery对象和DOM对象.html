@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.staticfile.org/jquery/2.2.0/jquery.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+</style>
+
+<body>
+    <div></div>
+    <script>
+        // 1 DOM 对象  用原生js获取的对象就是DOM对象
+        var myDiv = document.querySelector('div')// myDiv 是DOM对象
+        console.dir(myDiv)
+
+        // 2  jQuery对象  用jQuery方式获取过来的对象是jQuery对象 
+        $('div')//   $('div') 是jQuery对象
+        console.dir($('div'))
+
+        // myDiv.style.display = 'none';
+        // myDiv.hide()// error
+        // $('div').style.display = 'none';// error
+        $('div').hide()
+    </script>
+</body>
+
+</html>

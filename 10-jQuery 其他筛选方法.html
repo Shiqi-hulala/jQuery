@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.staticfile.org/jquery/2.2.0/jquery.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <ol>
+        <li>我是ol的 li</li>
+        <li>我是ol的 li</li>
+        <li class="item">我是ol的 li</li>
+        <li>我是ol的 li</li>
+        <li>我是ol的 li</li>
+    </ol>
+
+    <ul>
+        <li>我是ul的li</li>
+        <li>我是ul的li</li>
+        <li>我是ul的li</li>
+        <li>我是ul的li</li>
+        <li>我是ul的li</li>
+    </ul>
+    <div class="current">有current</div>
+    <div>没有current</div>
+</body>
+<script>
+    // 注意都是方法 要加括号
+    // 1.兄弟元素
+    // .siblings()  除了被选中的元素之外的所有亲兄弟 都设置外 pink
+    // $('ol .item').siblings('li').css('color', 'pink')
+
+    // 选中元素之后的其他亲兄弟
+    $('ol .item').nextAll('li').css('color', 'pink')
+    // 选中元素之前的其他亲兄弟
+    $('ol .item').prevAll('li').css('color', 'pink')
+
+
+    // 2.第n个元素
+    var index = 2;
+    // .1利用选择器的方式
+    // $('ul li:eq(2)').css('color', 'skyblue')
+    // $('ul li:eq('+index+')').css('color', 'skyblue')
+    // .2 利用选择方法   推荐写法
+    $('ul li').eq(index).css('color', 'green')
+
+
+    //3.判断是否有某个类名
+    console.log($('div:first').hasClass('current'))
+    console.log($('div:last').hasClass('current'))
+    // 有返回 true 没有返回 false
+
+</script>
+
+</html>

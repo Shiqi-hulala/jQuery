@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.staticfile.org/jquery/2.2.0/jquery.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <video src="..." muted></video>
+    <script>
+        // 1. DOM对象转换为 jQuery对象
+        // （1） 我们中直接获取视频 得到的就是jQuery对象
+        $('video');
+        // (2)我们已经使用了原生  获取过来的 DOM对象
+        var myvideo = document.querySelector('video');
+        // $(myvideo).play(); error
+
+
+        // 2.jQuery对象转换为DOM对象
+        // myvideo.play()
+        $('video')[0].play();  //伪数组
+        $('video').get(0).play();
+
+    </script>
+</body>
+
+</html>
